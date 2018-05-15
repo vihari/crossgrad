@@ -142,7 +142,7 @@ def adaptive_lenet(instance_list, num_classes, is_training=False,
 
 
     if is_training:
-        add_losses(net, style_net,  uids//2, labels, num_uids, num_classes, input_data, [1,1,1])
+        add_losses(net, style_net,  uids, labels, num_uids, num_classes, input_data, [1,1,1])
     
     end_points['Logits'] = logits
     end_points['Predictions'] = prediction_fn(logits) 
